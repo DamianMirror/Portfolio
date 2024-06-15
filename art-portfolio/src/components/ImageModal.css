@@ -1,0 +1,46 @@
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  height: 90vh; /* Set height to 90% of viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none; /* Remove white background */
+  padding: 0; /* Remove padding */
+  border-radius: 0; /* Remove border radius */
+}
+
+.modal img {
+  max-height: 100%;
+  object-fit: contain; /* Ensure the image maintains its aspect ratio */
+}
+
+/* Prevent page from scrolling */
+.no-scroll {
+  overflow: hidden;
+}
+
+/* Mobile adjustments */
+@media (max-width: 800px) {
+  .modal-content {
+    height: 80vh; /* Reduce height for mobile view */
+    width: 90vw; /* Ensure modal content doesn't exceed viewport width */
+  }
+
+  .modal img {
+    max-height: 80%; /* Further reduce image height for mobile view */
+    max-width: 90%; /* Ensure image doesn't exceed modal content width */
+  }
+}

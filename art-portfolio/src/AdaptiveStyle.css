@@ -1,0 +1,115 @@
+/* AdaptiveStyle.css */
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr; /* Divide container into auto-height for top and 1fr for bottom */
+        height: auto;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+
+    .info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        margin-bottom: 0px;
+    }
+
+    .contact-links {
+        order: 1; /* Move to the top */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .contact-link {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    .nav-links {
+        width: 100%;
+        order: 2; /* Move below contact-links */
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: row; /* Display links in a row */
+        justify-content: space-between; /* Space between each link */
+        padding: 0;
+        list-style: none;
+        margin: 0;
+        width: 100%;
+    }
+
+    .nav-links ul li {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        border: 2px solid white;
+        border-radius: 10px;
+        flex: 1; /* Make each link take up equal space */
+        text-align: center;
+        font-size: 18px;
+        margin: 0 5px; /* Add margin to separate borders */
+        height: 30px; /* Increase height of navigation buttons */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-links ul li {
+        height: 50px;
+        margin: 5px;
+        width: 120px;
+        background: #333;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        cursor: pointer;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        font-family: Consolas, Courier New, monospace;
+        border: solid #404c5d 1px;
+        font-size: 16px;
+        color: rgb(161, 161, 161);
+        -webkit-transition: 500ms;
+        transition: 500ms;
+        border-radius: 5px;
+        background: linear-gradient(145deg, #333, #212121);
+        -webkit-box-shadow: -1px -5px 15px #41465b, 5px 5px 15px #41465b,
+          inset 5px 5px 10px #212121, inset -5px -5px 10px #212121;
+        box-shadow: -1px -5px 15px #41465b, 5px 5px 15px #41465b,
+          inset 5px 5px 10px #212121, inset -5px -5px 10px #212121;
+      }
+      
+      .nav-links ul li:hover {
+        -webkit-box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;
+        box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;
+        color: #d6d6d6;
+        -webkit-transition: 500ms;
+        transition: 500ms;
+      }
+      
+      .nav-links ul li button.active {
+        scale: 1.09;
+      }
+
+    /* Ensure first and last items don't have extra margin on the sides */
+    .nav-links ul li:first-child {
+        margin-left: 0;
+    }
+
+    .nav-links ul li:last-child {
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,15 @@
+.gallery-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    width: 80%; /* Set width to 80% of the container */
+    margin: 0 auto; /* Center the gallery */
+  }
+  
+  .gallery-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
